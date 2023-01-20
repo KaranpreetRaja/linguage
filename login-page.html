@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login-page.css">
+</head>
+<body>
+  {% block content %} 
+    <section id="header">
+        <nav>
+            <div id="navbar">
+                <img src="" alt="logo" id="logo" />
+                <a href="login-page.html" class="nav-link">Register</a>
+                <a href="login-page.html" class="nav-link">Sign In</a>
+            </div>
+            </nav>
+            </section>
+          
+    <section>
+      
+        <div id="login" >
+          {% with messages = get_flashed_messages() %}
+          {% if messages %}
+          <div id="signupLink">
+            {{ messages[0] }}
+          </div>
+          {% endif %}
+          {% endwith %}
+          <p>Login</p>
+          <div id="login-form">
+            <form method="POST" action="/login">
+              <label for="email" id="email">Email</label><br>
+              <input type="email" name="email" placeholder="Email" autofocus=""></input><br>
+              <label for="password">Password</label><br>
+              <input type="password" name="password" placeholder="Password"><br>
+              <button type="submit">Login</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      {% endblock %}
+</body>
+</html>

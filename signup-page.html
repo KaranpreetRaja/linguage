@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login-page.css">
+</head>
+<body>
+  {% block content %} 
+    <section id="header">
+        <nav>
+            <div id="navbar">
+                <img src="" alt="logo" id="logo" />
+                <a href="login-page.html" class="nav-link">Register</a>
+                <a href="login-page.html" class="nav-link">Sign In</a>
+            </div>
+            </nav>
+            </section>
+
+    <section>
+
+        <div id="login" >
+          <p>Sign Up</p>
+          {% with messages = get_flashed_messages() %}
+{% if messages %}
+    <div>
+        {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}" id="signupLink">Login Page</a>.
+    </div>
+{% endif %}
+{% endwith %}
+
+          <div id="login-form">
+            <div id="login" >
+              <p>Sign Up</p>
+              {% with messages = get_flashed_messages() %}
+              {% if messages %}
+              <div>
+                {{ messages[0] }}. Go to <a href="{{ url_for('auth.login') }}" id="signupLink">Login Page</a>.
+              </div>
+            {% endif %}
+            {% endwith %}
+            <form method="POST" action="/signup">
+              <label for="name" id="name">Name</label><br>
+              <input type="text" name="name" placeholder="Name" autofocus=""><br>
+              <label for="email" id="email">Email</label><br>
+              <input type="email" name="email" placeholder="Email" autofocus=""></input><br>
+              <label for="password">Password</label><br>
+              <input type="password" name="password" placeholder="Password"><br>
+              <button type="submit">Sign Up</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      {% endblock %}
+</body>
+</html>

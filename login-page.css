@@ -1,0 +1,79 @@
+* {
+    padding: 0;
+    margin: 0;
+
+    --primary-colour: radial-gradient(#10122b, #141835);
+    --secondary-colour: #10122b;
+    --primary-text: #767889;
+}
+body {
+    background: #0e0e23;
+    color: var(--primary-text);
+    font-family: "Circular-Loom";
+}
+#navbar {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 10px;
+    justify-content: flex-end;
+    border-radius: 30px;
+    margin: 10px 8px;
+    background: var(--secondary-colour);
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+.nav-link {
+    padding: 0px 15px;
+    text-decoration: none;
+    color: var(--primary-text);
+    height: 100%;
+}
+.nav-link:hover {
+    color: #384295;
+}
+#login {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    margin: -120px 0 0 -310px;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 30px;
+    background: var(--secondary-colour);
+    filter: drop-shadow(10px 15px 10px #000);
+}
+#signupLink {
+    text-decoration: none;
+    color: var(--primary-text);
+}
+
+#login p {
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+#login-form label,
+#login-form button {
+    margin-left: 10px;
+}
+
+#login-form input {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 9px;
+}
+#login-form button {
+    padding: 15px;
+    color: var(--primary-text);
+    background: var(--primary-colour);
+    outline: none;
+    border: 1px solid var(--primary-text);
+    border-radius: 20px;
+    width: 180px;
+}

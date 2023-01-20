@@ -1,0 +1,19 @@
+{
+    "folders": [
+		{
+			"name": "Hackathon",
+			"path": "/"
+		}
+	],
+    "settings": {
+        "files.hotExit": "off",
+        "vsliveshare.join.reload.workspaceId": "2E5329390DAABB4C0A5A082CFFE915C5146A",
+        "vsliveshare.join.reload.workspaceFolder": "C:\\Users\\Owner\\AppData\\Local\\Temp\\vsliveshare\\tmp-2E5329390DAABB4C0A5A082CFFE915C5146A",
+        "vsliveshare.join.correlationId": "",
+        "extensions.ignoreRecommendations": true,
+        "editor.formatOnSave": false,
+        "typescript.tsc.autoDetect": "off",
+        "debug.allowBreakpointsEverywhere": true,
+        "html.autoClosingTags": false
+    }
+}
